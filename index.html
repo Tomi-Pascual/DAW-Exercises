@@ -1,17 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="./exercises/variables_and_operators.js"></script>
-    <script src="./exercises/strings.js"></script>
-    <script src="./exercises/arrays.js"></script>
-    <script src="./exercises/if_else.js"></script>
-    <script src="./exercises/functions.js"></script>
-    <script src="./exercises/for.js"></script>
-    
-</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Try Times</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="fecha">
+                <p>jueves 23 de Mayo de 2024</p>
+            </div>
+            <div class="menu-movil">
+                <div>
+                    <img src="./img/menu blanco.png" alt="menu hamburguesa" width="30" class="menu">
+                </div>
+                <div class="name">
+                    <h1><span>TRY TIMES</span></h1>
+                    <span>Super Rugby</span>
+                </div>
+            </div>
+            <div class="header">
+                <div class="main-header">
+                    <div class="logo">
+                        <img src="./img/IconTryTimes.jpeg" alt="Try Times" width="105">
+                    </div>
+                    <div class="nav-bar">
+                        <div class="name">
+                            <h1><span>TRY TIMES</span></h1>
+                            <span>Super Rugby</span>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#"><span>Inicio</span></a></li>
+                                <li><a href="#"><span>Noticias</span></a></li>
+                                <li><a href="#"><span>Equipos</span></a></li>
+                                <li><a href="#"><span>Contacto</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <form>
+                <div id="form-title-container">
+                    <h2>Formulario</h2>
+                </div>
+                <div class="form">
+                    <div>
+                        <div class="nombre">
+                            <label for="nameid">Nombre completo</label>
+                            <input type="text" name="name" id="nameid" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="email">
+                            <label for="emailid">Email</label>
+                            <input type="text" name="email" id="emailid" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="clave">
+                            <label for="claveid">Contraseña</label>
+                            <input type="password" name="clave" id="claveid" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="repetir-clave">
+                            <label for="repetirclaveid">Repetir Contraseña</label>
+                            <input type="password" name="repetirclave" id="repetirclaveid" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="edad">
+                            <label for="edadid">Edad</label>
+                            <input type="number" name="edad" id="edadid" required>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="telefono">
+                            <label for="telefonoid">Teléfono</label>
+                            <input type="number" name="telefono" id="telefonoid" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="direccion">
+                            <label for="direccionid">Dirección</label>
+                            <input type="text" name="direccion" id="direccionid" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="ciudad">
+                            <label for="ciudadid">Ciudad</label>
+                            <input type="text" name="ciudad" id="ciudadid" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="codigo">
+                            <label for="codigoid">Código postal</label>
+                            <input type="text" name="codigo" id="codigoid" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="dni">
+                            <label for="dniid">DNI</label>
+                            <input type="number" name="dni" id="dniid" required>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+            <div class="contenedor">
+                <div class="noticia">
+                    <div>
+                        <h2>Top 14: ¡Toulouse le ganó 29-26 a La Rochelle y es el campeón!</h2>
+                        <img src="./img/Rochelle-Touluse.jpg" alt="touluse" class="img-noticia">
+                        <span>Tal como sucedió en 2021, Toulouse y La Rochelle volvieron a verse las caras en 
+                            una definición de Top 14 que fue tan apasionante como incierta y con un marcado 
+                            suspenso hasta el último minuto. Con un try de Santiago Chocobares, el conjunto 
+                            de Ugo Mola venció al de Ronan O'gara por 29 a 26 y sumó su título número 22.
+                        </span>                       
+                    </div>
+                </div>
+                <div class="noticias-secundarias">
+                    <div class="noticia-secundaria">
+                        <h3>Gloucester - Sharks: horario y cómo ver la final de la Challenge Cup</h3>
+                        <img src="./img/gloucuster_final.jpeg" alt="Gloucester - Sharks">
+                        <span>Este viernes, Gloucester y Sharks definirán en la cancha del Tottenham al gran campeón 
+                            de la Challenge Cup. El partido lo podrás ver desde las 15.50 en vivo en Star+.
+                        </span>
+                    </div>
+                    <div class="noticia-secundaria">
+                        <h3>¡El mejor rugby en Star+! Agenda completa del fin de semana</h3>
+                        <img src="./img/noticia-secu.jpeg" alt="El mejor rugby">
+                        <span>En un fin de semana que promete ser apasionante y repleto de rugby, el plato principal 
+                            serán las definiciones de la Champions Cup y Challenge Cup, pero además continúa la acción 
+                            en los torneos más destacados
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>Sobre nosotros</h4>
+                    <p>Try Times es tu fuente de noticias confiable para todo lo relacionado con el rugby. ¡Mantente informado con nosotros!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces útiles</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Equipos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <ul class="social-media">
+                        <li><a href="#"><img src="./img/facebook-icon.png" alt="Facebook" width="25"></a></li>
+                        <li><a href="#"><img src="./img/twitter-icon.png" alt="Twitter" width="25"></a></li>
+                        <li><a href="#"><img src="./img/instagram-icon.png" alt="Instagram" width="25"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-bottom">Derechos de autor © 2024 | Try Times</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
