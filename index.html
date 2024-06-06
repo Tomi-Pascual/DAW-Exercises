@@ -44,56 +44,68 @@
         </header>
         <main>
             <form>
-                <h2>Formulario</h2>
+                <div id="form-title-container">
+                    <h2>Formulario</h2>
+                </div>
                 <div class="form">
                     <div>
                         <div class="nombre">
                             <label for="nameid">Nombre completo</label>
                             <input type="text" name="name" id="nameid" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="email">
                             <label for="emailid">Email</label>
                             <input type="text" name="email" id="emailid" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="clave">
                             <label for="claveid">Contraseña</label>
                             <input type="password" name="clave" id="claveid" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="repetir-clave">
                             <label for="repetirclaveid">Repetir Contraseña</label>
                             <input type="password" name="repetirclave" id="repetirclaveid" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="edad">
                             <label for="edadid">Edad</label>
                             <input type="number" name="edad" id="edadid" required>
+                            <div class="error-message"></div>
                         </div>
                     </div>
                     <div>
                         <div class="telefono">
                             <label for="telefonoid">Teléfono</label>
                             <input type="number" name="telefono" id="telefonoid" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="direccion">
                             <label for="direccionid">Dirección</label>
                             <input type="text" name="direccion" id="direccionid" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="ciudad">
                             <label for="ciudadid">Ciudad</label>
                             <input type="text" name="ciudad" id="ciudadid" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="codigo">
                             <label for="codigoid">Código postal</label>
                             <input type="text" name="codigo" id="codigoid" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="dni">
                             <label for="dniid">DNI</label>
                             <input type="number" name="dni" id="dniid" required>
+                            <div class="error-message"></div>
                         </div>
                     </div>
                 </div>
                 <div class="botones">
-                    <input type="submit">
-                    <input type="reset">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Reset">
                 </div>
             </form>
             <div class="contenedor">
