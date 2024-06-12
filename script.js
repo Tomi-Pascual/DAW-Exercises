@@ -114,37 +114,77 @@ document.addEventListener("DOMContentLoaded", function () {
         formTitle.textContent = "HOLA " + nombre.value;
     });
 
+    const showModal = (message) => {
+        const modal = document.getElementById("modal");
+        const modalMessage = document.getElementById("modal-message");
+        modalMessage.textContent = message;
+        modal.style.display = "block";
+
+        const closeModal = document.getElementsByClassName("close")[0];
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    };
+
     form.addEventListener("submit", (event) => {
         event.preventDefault();
-
-        let allValid = true;
-        let errors = [];
+        let formIsValid = true;
+        const messages = [];
 
         Object.keys(validators).forEach(id => {
             const input = document.getElementById(id);
             const errorMessage = validators[id]();
             if (errorMessage) {
                 showError(input, errorMessage);
-                errors.push(errorMessage);
-                allValid = false;
+                messages.push(errorMessage);
+                formIsValid = false;
             } else {
                 clearError(input);
             }
         });
 
-        if (allValid) {
-            alert(`Formulario enviado correctamente:\n
-            Nombre completo: ${nombre.value}\n
-            Email: ${email.value}\n
-            Contraseña: ${clave.value}\n
-            Edad: ${edad.value}\n
-            Teléfono: ${telefono.value}\n
-            Dirección: ${direccion.value}\n
-            Ciudad: ${ciudad.value}\n
-            Código postal: ${codigo.value}\n
-            DNI: ${dni.value}`);
+        if (formIsValid) {
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch('https://jsonplaceholder.typicode.com/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.id) {
+                    localStorage.setItem('userData', JSON.stringify(result));
+                    showModal(`Suscripción exitosa:\n${JSON.stringify(result, null, 2)}`);
+                } else {
+                    showModal(`Error en la suscripción:\n${JSON.stringify(result, null, 2)}`);
+                }
+            })
+            .catch(error => {
+                showModal(`Error en la suscripción:\n${error.message}`);
+            });
         } else {
-            alert(`Errores en el formulario:\n${errors.join("\n")}`);
+            showModal(`Errores en el formulario:\n${messages.join("\n")}`);
         }
     });
+
+    // Recargar datos desde LocalStorage
+    const savedData = JSON.parse(localStorage.getItem('userData'));
+    if (savedData) {
+        Object.keys(savedData).forEach(key => {
+            const input = document.querySelector(`[name=${key}]`);
+            if (input) {
+                input.value = savedData[key];
+            }
+        });
+    }
 });
