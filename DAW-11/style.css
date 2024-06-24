@@ -1,0 +1,79 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f0f8f7;
+    color: #333;
+}
+
+h1 {
+    color: #2e8b57;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f4c430;
+}
+
+input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-container {
+    margin: 20px 0;
+}
+
+table {
+    width: 97%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #2e8b57;
+    color: white;
+}
+
+td {
+    background-color: #e0f7da;
+}
+
+img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

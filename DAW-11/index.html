@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty API</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <a href="../index.html" style="font-size: large;">Volver</a>
+    <h1>Rick and Morty Characters</h1>
+    <button id="fetchAll">Fetch All Characters</button>
+    
+    <div>
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="status" placeholder="Status">
+        <input type="text" id="species" placeholder="Species">
+        <input type="text" id="type" placeholder="Type">
+        <input type="text" id="gender" placeholder="Gender">
+        <button id="fetchFiltered">Fetch Filtered Characters</button>
+    </div>
+    
+    <table id="output">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Species</th>
+                <th>Type</th>
+                <th>Gender</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
